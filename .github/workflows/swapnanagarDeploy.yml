@@ -17,8 +17,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SWAPNAGAR_SERVER }}
-          username: ${{ secrets.FTP_SWAPNAGAR_USER }}
-          password: ${{ secrets.FTP_SWAPNAGAR_PASS }}
+          username: ${{ secrets.FTP_SWAPNANAGAR_USER }}
+          password: ${{ secrets.FTP_SWAPNANAGAR_PASS }}
           local-dir: ./                                # Theme files are in repo root
           server-dir: public_html/swapnanagar-theme/wp-content/themes/swapnanagar/
           exclude: |
