@@ -11,7 +11,7 @@ get_header();
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 <link rel="stylesheet" href="wp-content/themes/community-theme/style-community.css" />
 
-<section class="hero-section" data-aos="fade-up">
+<section class="hero-section fix-height" data-aos="fade-up">
     <div class="hero-content">
         <h1>Welcome to Our Community</h1>
         <p>Engage, connect, and grow with your neighbors.</p>
@@ -20,7 +20,7 @@ get_header();
 </section>
 
 <!-- Features Overview -->
-<section class="features-overview" data-aos="fade-up">
+<section class="features-overview fix-height" data-aos="fade-up">
     <h2>What You Can Do</h2>
     <div class="features-list">
         <div class="feature-card">
@@ -43,7 +43,7 @@ get_header();
 </section>
 
 <!-- Buildings & Flats Showcase -->
-<section class="buildings-flats" data-aos="fade-up">
+<section class="buildings-flats fix-height" data-aos="fade-up">
     <h2>Buildings & Flats Highlights</h2>
     <div class="showcase-list">
         <div class="showcase-card">
@@ -62,7 +62,7 @@ get_header();
 </section>
 
 <!-- To-Let Listings Preview -->
-<section class="tolet-listings" data-aos="fade-up">
+<section class="tolet-listings fix-height" data-aos="fade-up">
     <h2>To-Let Listings</h2>
     <div class="tolet-list">
         <div class="tolet-card">
@@ -77,7 +77,7 @@ get_header();
 </section>
 
 <!-- Owner/Member Directory Preview -->
-<section class="member-directory" data-aos="fade-up">
+<section class="member-directory fix-height" data-aos="fade-up">
     <h2>Owner/Member Directory</h2>
     <div class="member-list">
         <div class="member-card">
@@ -96,7 +96,7 @@ get_header();
 </section>
 
 <!-- Marketplace Highlights -->
-<section class="marketplace-highlights" data-aos="fade-up">
+<section class="marketplace-highlights fix-height" data-aos="fade-up">
     <h2>Marketplace Highlights</h2>
     <div class="marketplace-list">
         <div class="marketplace-card">
@@ -115,7 +115,7 @@ get_header();
 </section>
 
 <!-- Tutoring Offers/Requests -->
-<section class="tutoring-offers" data-aos="fade-up">
+<section class="tutoring-offers fix-height" data-aos="fade-up">
     <h2>Tutoring Offers & Requests</h2>
     <div class="tutoring-list">
         <div class="tutoring-card">
@@ -130,7 +130,7 @@ get_header();
 </section>
 
 <!-- Community News or Announcements -->
-<section class="community-news" data-aos="fade-up">
+<section class="community-news fix-height" data-aos="fade-up">
     <h2>Community News & Announcements</h2>
     <ul class="news-list">
         <li>Upcoming community meeting on Friday.</li>
@@ -140,7 +140,7 @@ get_header();
 </section>
 
 <!-- Member Testimonials or Success Stories -->
-<section class="testimonials" data-aos="fade-up">
+<section class="testimonials fix-height" data-aos="fade-up">
     <h2>Member Testimonials</h2>
     <div class="testimonial-list">
         <blockquote>
@@ -155,7 +155,7 @@ get_header();
 </section>
 
 <!-- Quick Stats -->
-<section class="quick-stats" data-aos="fade-up">
+<section class="quick-stats fix-height" data-aos="fade-up">
     <h2>Community Stats</h2>
     <div class="stats-list">
         <div class="stat-card">
@@ -178,13 +178,13 @@ get_header();
 </section>
 
 <!-- Call to Action -->
-<section class="call-to-action" data-aos="zoom-in">
+<section class="call-to-action fix-height" data-aos="zoom-in">
     <h2>Ready to Join the Community?</h2>
     <a href="#" class="cta-btn">Register Now</a>
 </section>
 
 <!-- Latest Blog Posts or Updates -->
-<section class="latest-posts" data-aos="fade-up">
+<section class="latest-posts fix-height" data-aos="fade-up">
     <h2>Latest Blog Posts</h2>
     <div class="posts-list">
         <div class="post-card">
@@ -206,7 +206,7 @@ get_header();
 </section>
 
 <!-- Contact/Support Section -->
-<section class="contact-support" data-aos="fade-up">
+<section class="contact-support fix-height" data-aos="fade-up">
     <h2>Contact & Support</h2>
     <form class="contact-form">
         <div class="form-row">
@@ -258,5 +258,5 @@ get_header();
   });
 </script>
 <?php
-get_footer();
+// get_footer();
 ?>

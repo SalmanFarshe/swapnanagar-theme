@@ -1,7 +1,7 @@
 <header class="community-header" id="communityHeader">
     <div class="header-container">
         <a class="logo" href="#">
-            <img src="logo.png" alt="Community Logo" style="height: 40px;">
+            <img src="wp-content/themes/community-theme/swapnagar.png" alt="Community Logo" style="height: 50px;">
         </a>
         <nav class="main-nav" id="mainNav">
             <ul>
