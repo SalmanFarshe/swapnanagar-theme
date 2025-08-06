@@ -1,4 +1,4 @@
-name: Publish Website to CPanel
+name: Publish Theme to cPanel
 
 on:
   push:
@@ -13,11 +13,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Deploy via FTP to cPanel
+      - name: Deploy Theme via FTP to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SWAPNAGAR_SERVER }}
-          username: ${{ secrets.FTP_SWAPNANAGAR_USER }}
-          password: ${{ secrets.FTP_SWAPNANAGAR_PASS }}
-          local-dir: ./
-          server-dir: ./
+          username: ${{ secrets.FTP_SWAPNAGAR_USER }}
+          password: ${{ secrets.FTP_SWAPNAGAR_PASS }}
+          local-dir: wp-content/themes/swapnanagar/ # Local theme folder in your repo
+          server-dir: public_html/swapnanagar-theme/wp-content/themes/swapnanagar/ # Exact path to theme on server
