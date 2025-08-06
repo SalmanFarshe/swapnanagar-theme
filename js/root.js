@@ -14,10 +14,10 @@ jQuery(document).ready(function ($) {
       $(".community-header").removeClass("sticky");
     }
   });
-});
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  // Initialize AOS
   AOS.init({
     duration: 900,
-    once: true
+    once: true,
   });
+});
