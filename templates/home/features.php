@@ -1,22 +1,38 @@
-<!-- Features Overview -->
-<section class="features-overview fix-height" data-aos="fade-up">
+<section class="features-overview">
     <h2>What You Can Do</h2>
     <div class="features-list">
-        <div class="feature-card">
-            <h5>Buildings</h5>
-            <p>Explore all 15 buildings in the community.</p>
-        </div>
-        <div class="feature-card">
-            <h5>Flats</h5>
-            <p>View flat details, availability, and owners.</p>
-        </div>
-        <div class="feature-card">
-            <h5>Marketplace</h5>
-            <p>Buy, sell, or give away products and books.</p>
-        </div>
-        <div class="feature-card">
-            <h5>Tutoring</h5>
-            <p>Offer or request tutoring services.</p>
-        </div>
+
+        <?php 
+        $features = new WP_Query([
+            'post_type'      => 'community_feature',
+            'posts_per_page' => -1,
+            'orderby'        => 'menu_order',
+            'order'          => 'ASC',
+        ]);
+        if ($features->have_posts()):
+            $delay = 0.1;
+            while ($features->have_posts()): $features->the_post(); ?>
+                <div class="feature-card bg-light wow animate__animated animate__fadeInUp" data-wow-delay="<?php echo esc_attr($delay); ?>s">
+                    <h5>
+                        <?php 
+                        // You can store icon as post meta if you want, for now a default icon
+                        echo '<i class="fas fa-check-circle"></i> '; 
+                        the_title(); 
+                        ?>
+                    </h5>
+                    <p><?php the_excerpt(); ?></p>
+                </div>
+            <?php
+            $delay += 0.1;
+            endwhile;
+            wp_reset_postdata();
+        else: ?>
+            <p>No features added yet.</p>
+        <?php endif; ?>
+        
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="#" class="register-btn">See More</a>
     </div>
 </section>
