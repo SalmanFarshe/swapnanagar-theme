@@ -1,66 +1,7 @@
-<style>
-    .buildings-flats {
-    padding: 60px 20px;
-    background: #f8f9fa;
-    text-align: center;
-}
-
-.buildings-flats .section-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: bold;
-    color: #333;
-}
-
-.showcase-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.building-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.building-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.building-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.building-info {
-    padding: 15px;
-    text-align: center;
-}
-
-.building-info h5 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    color: #175B8C; /* Theme Blue */
-}
-
-.building-info p {
-    color: #555;
-    margin-bottom: 12px;
-}
-
-</style>
 <!-- Buildings & Flats Showcase -->
 <section class="buildings-flats" data-aos="fade-up">
     <h2 class="section-title">Our Buildings</h2>
-    <div class="showcase-grid">
-    
+    <div class="showcase-grid">    
         <!-- Building Card -->
         <div class="building-card">
             <div class="building-image">

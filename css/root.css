@@ -97,6 +97,7 @@ body {
 .stats-list,
 .posts-list,
 .testimonial-list {
+  padding-top: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

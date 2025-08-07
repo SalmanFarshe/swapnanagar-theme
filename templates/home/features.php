@@ -18,5 +18,21 @@
             <h5>Tutoring</h5>
             <p>Offer or request tutoring services.</p>
         </div>
+        <div class="feature-card">
+            <h5>Tutoring</h5>
+            <p>Offer or request tutoring services.</p>
+        </div>
+        <div class="feature-card">
+            <h5>Tutoring</h5>
+            <p>Offer or request tutoring services.</p>
+        </div>
+        <div class="feature-card">
+            <h5>Tutoring</h5>
+            <p>Offer or request tutoring services.</p>
+        </div>
+        <div class="feature-card">
+            <h5>Tutoring</h5>
+            <p>Offer or request tutoring services.</p>
+        </div>
     </div>
 </section>
