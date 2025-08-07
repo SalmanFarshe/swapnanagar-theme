@@ -17,7 +17,9 @@ jQuery(document).ready(function ($) {
 
   // Initialize AOS
   AOS.init({
-    duration: 900,
     once: true,
   });
+
+  // Initialize WOW.js
+  new WOW().init();
 });
