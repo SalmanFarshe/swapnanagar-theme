@@ -1,0 +1,79 @@
+/*============================
+contact css
+============================= */
+
+.contact-area {
+    background: #FBFBFB;
+    padding: 120px 0;
+    position: relative;
+    z-index: 1;
+
+    .map-bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0;
+        text-align: center;
+        z-index: -1;
+    }
+
+    .contact-content {
+
+        h2 {
+            font-size: 40px;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+
+        p {
+            margin-bottom: 35px;
+            padding-right: 30px;
+        }
+
+        h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        h4 {
+
+            a {
+                font-size: 25px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .contact-form-wrapper {
+
+        form {
+
+            input, textarea {
+                padding: 16px 20px;
+                border: 1px solid $border-color;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                color: $body-color;
+
+                &::placeholder {
+                    opacity: 1;
+                }
+
+                &:focus {
+                    border-color: $theme-color;
+                }
+            }
+
+            button {
+                padding: 16px 40px;
+                border-radius: 5px;
+                background: $theme-color;
+                color: $white;
+            }
+        }
+    }
+}

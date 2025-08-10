@@ -1,0 +1,83 @@
+/*============================
+footer css
+============================= */
+
+.footer-area {
+
+    .footer-widget {
+        margin-bottom: 55px;
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+
+        ul {
+            li {
+
+                a {
+                    font-size: 16px;
+                    line-height: 35px;
+                    color: $body-color;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 35px;
+                    color: $body-color;
+                }
+            }
+        }
+    }
+
+    .footer-credit {
+        padding: 35px 0;
+        border-top: 1px solid $border-color;
+
+        .copy-right {
+            @media #{$xs} {
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-weight: 300;
+
+                a {
+                    color: inherit;
+                }
+            }
+        }
+
+        .footer-social {
+
+            ul {
+
+                li {
+                    margin: 0 15px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        color: $body-color;
+                        display: block;
+
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

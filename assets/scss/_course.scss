@@ -1,0 +1,279 @@
+/*============================
+course css
+============================= */
+
+.course-area {
+
+    .single-course {
+        border-radius: 10px;
+        background: $white;
+        @include box-shadow(0px 0px 61px rgba(229, 229, 229, 0.35));
+        @include transition(.3s);
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        &:hover {
+            @include box-shadow(0px 15px 61px rgba(229, 229, 229, 0.8));
+
+            .course-img {
+
+                a img {
+
+                    @include transform(scale(1.2));
+                }
+            }
+        }
+
+        .course-img {
+            overflow: hidden;
+
+            a {
+                display: block;
+
+                img {
+                    width: 100%;
+                    @include transition(.3s);
+                }
+            }
+        }
+
+        .course-info {
+            padding: 30px 28px;
+
+            h4 {
+
+                a {
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 32px;
+                    margin-bottom: 30px;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+
+                    @media #{$lg} {
+                        font-size: 18px;
+                        line-height: 26px;
+                    }
+                    @media #{$md} {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+                    @media #{$xs} {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+                }
+            }
+
+            .course-meta {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .meta-item {
+                    margin-bottom: 8px;
+
+                    i {
+                        font-size: 13px;
+                        color: $heading-color;
+                        width: 28px;
+                        height: 28px;
+                        line-height: 26px;
+                        border: 1px solid $border-color;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        text-align: center;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        color: $heading-color;
+                        margin-right: 10px;
+                    }
+                }
+
+                .price {
+                    span {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .course-pagination {
+
+        .pagination {
+
+            li {
+
+                a {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 10px;
+                    background: $white;
+                    color: $heading-color;
+                    border-color: $theme-color;
+
+                    &:hover {
+                        color: $white;
+                        background: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .single-course-wrapper {
+        .course-img {
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .course-included {
+
+        ul {
+
+            li {
+                line-height: 1.8;
+
+                i {
+                    color: $theme-color;
+                    margin-right: 10px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .course-content {
+
+        .single-accordion {
+            margin-bottom: 15px;
+            border: 1px solid rgba($border-color, .3);
+            border-radius: 4px;
+
+            .accordion-btn {
+
+                button {
+                    padding: 15px 20px;
+                    padding-right: 36px;
+                    border: none;
+                    background: none;
+                    font-weight: 500;
+                    color: $heading-color;
+                    position: relative;
+
+                    &::after {
+                        content: "\ea58";
+                        font: normal normal normal 1em/1 "LineIcons";
+                        position: absolute;
+                        right: 20px;
+                        top: 18px;
+                        @include transition(.3s);
+                        @include transform(rotate(180deg));
+                    }
+
+                    &.collapsed {
+                        &::after {
+                            @include transform(rotate(0deg));
+                        }
+                    }
+                }
+            }
+
+            .accordion-content {
+                padding: 10px 20px 30px;
+            }
+        }
+    }
+
+    .right-sidebar {
+
+        .course-info {
+            background: #f5f5f5;
+            padding: 50px 30px;
+            border-radius: 4px;
+
+            ul {
+
+                li {
+                    font-size: 14px;
+                    padding: 20px 0;
+                    border-bottom: 1px solid rgba($border-color, .5);
+
+                    span {
+                        
+                        &.text-right {
+                            color: $heading-color;
+
+                            a {
+                                color: inherit;
+
+                                &:hover {
+                                    color: $theme-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main-btn {
+                background: $theme-color;
+                color: $white;
+                border-radius: 4px;
+                text-transform: uppercase;
+            }
+        }
+
+        .course-category {
+
+            ul {
+                li {
+                    padding: 15px 0;
+                    border-bottom: 1px solid #f5f5f5;
+
+                    a {
+                        color: $body-color;
+                        display: flex;
+                        align-items: center;
+
+                        &:hover {
+                            color: $theme-color;
+                        }
+
+                        i {
+                            color: $theme-color;
+                            font-size: 12px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.view-all-btn {
+
+    a {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 16px 36px;
+        border: 2px solid $theme-color;
+        color: $heading-color;
+    }
+}
