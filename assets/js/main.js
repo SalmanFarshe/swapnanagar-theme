@@ -1,9 +1,8 @@
 (function() {
-    
+
     "use strict";
     
-    //===== Prealoder
-
+    // Prealoder
     window.onload = function() {
         window.setTimeout(fadeout, 100);
     }
@@ -13,10 +12,7 @@
         document.querySelector('.preloader').style.display = 'none';
     }
 
-    
-    /*=====================================
-    Sticky
-    ======================================= */
+    /* Sticky */
     window.onscroll = function () {
         var header_navbar = document.getElementById("header_navbar");
         var sticky = header_navbar.offsetTop;
@@ -27,8 +23,6 @@
             header_navbar.classList.remove("sticky");
         }
 
-
-
         // show or hide the back-top-top button
         var backToTo = document.querySelector(".back-to-top");
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -38,21 +32,13 @@
         }
     };
 
-
-        //===== close navbar-collapse when a  clicked
+    // close navbar-collapse when a  clicked
     let navbarToggler = document.querySelector(".navbar-toggler");    
     var navbarCollapse = document.querySelector(".navbar-collapse");
 
-    document.querySelectorAll(".page-scroll").forEach(e =>
-        e.addEventListener("click", () => {
-            navbarToggler.classList.remove("active");
-            navbarCollapse.classList.remove('show')
-        })
-    );
     navbarToggler.addEventListener('click', function() {
         navbarToggler.classList.toggle("active");
     });
-    
 
     //WOW Scroll Spy
     var wow = new WOW({
@@ -60,7 +46,4 @@
         mobile: false
     });
     wow.init();
-
-
-
 })();
