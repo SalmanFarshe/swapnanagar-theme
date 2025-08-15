@@ -1,0 +1,69 @@
+/*============================
+footer css
+============================= */
+.footer-area .footer-widget {
+  margin-bottom: 55px;
+}
+
+.footer-area .footer-widget .logo {
+  margin-bottom: 20px;
+}
+
+.footer-area .footer-widget h5 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.footer-area .footer-widget ul li a {
+  font-size: 16px;
+  line-height: 35px;
+  color: #747E88;
+}
+
+.footer-area .footer-widget ul li a:hover {
+  color: #F2A92C;
+}
+
+.footer-area .footer-widget ul li p {
+  font-size: 16px;
+  line-height: 35px;
+  color: #747E88;
+}
+
+.footer-area .footer-credit {
+  padding: 35px 0;
+  border-top: 1px solid #D6D6D6;
+}
+
+@media (max-width: 767px) {
+  .footer-area .footer-credit .copy-right {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-area .footer-credit .copy-right p {
+  font-weight: 300;
+}
+
+.footer-area .footer-credit .copy-right p a {
+  color: inherit;
+}
+
+.footer-area .footer-credit .footer-social ul li {
+  margin: 0 15px;
+}
+
+.footer-area .footer-credit .footer-social ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-area .footer-credit .footer-social ul li a {
+  color: #747E88;
+  display: block;
+}
+
+.footer-area .footer-credit .footer-social ul li a:hover {
+  color: #F2A92C;
+}
+/*# sourceMappingURL=style.css.map */
