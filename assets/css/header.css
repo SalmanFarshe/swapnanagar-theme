@@ -2,6 +2,11 @@
     02.HEADER css 
 ===========================*/
 /*===== NAVBAR =====*/
+.navbar-nav .nav-item a.black-clr {
+  display: block;
+  padding: 8px 0;
+  color: #283747;
+}
 .header_navbar {
   position: absolute;
   top: 0;
