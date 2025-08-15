@@ -78,6 +78,6 @@ else :
     echo '<p>No library found.</p>';
 endif;
 
-    get_template_part( './tem-parts/footer', null, null );
-    wp_footer();
+get_template_part( './tem-parts/footer', null, null );
+wp_footer();
 

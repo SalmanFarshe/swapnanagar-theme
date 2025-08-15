@@ -65,9 +65,9 @@
 		get_template_part( 'tem-parts/library-sec' );
 	?>
 	
-	<!--====== TEAM PART START ======-->
+	<!--====== TUTOR PART START ======-->
 	<?php
-		get_template_part( 'tem-parts/team-sec' );
+		get_template_part( 'tem-parts/tutor-sec' );
 	?>
 
 	<!--====== TESTIMONIAL PART START ======-->

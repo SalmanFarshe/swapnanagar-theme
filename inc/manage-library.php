@@ -23,11 +23,11 @@ function swapnanagar_register_librarys_cpt() {
         'menu_icon'          => 'dashicons-book',
         'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
         'has_archive'        => true,
-        'rewrite'            => array( 'slug' => 'library' ),
+        'rewrite'            => array( 'slug' => 'libraries' ),
         'show_in_rest'       => true, // Gutenberg enabled
     );
 
-    register_post_type( 'library', $args );
+    register_post_type( 'libraries', $args );
 }
 add_action( 'init', 'swapnanagar_register_librarys_cpt' );
 

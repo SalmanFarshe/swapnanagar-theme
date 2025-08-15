@@ -61,8 +61,8 @@
 
     // theme support
     // Enable post thumbnails for posts, pages, and custom post types
-    add_theme_support('post-thumbnails', array('post', 'page', 'service', 'building', 'library')); // add your CPTs
-    
+    add_theme_support('post-thumbnails', array('post', 'page', 'service', 'buildings', 'libraries', 'tutor')); // add your CPTs
+
     // Optional: define custom image sizes
     add_image_size('swapnanagar-small', 300, 200, true);
     add_image_size('swapnanagar-medium', 600, 400, true);
@@ -71,6 +71,9 @@
 
     //  building section options
     include_once('inc/manage-buildings.php');
-    
-    //  building section options
+
+    //  library section options
     include_once('inc/manage-library.php');
+    
+    //  tutor section options
+    include_once('inc/manage-tutors.php');

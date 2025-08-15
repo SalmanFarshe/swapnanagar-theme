@@ -4,8 +4,8 @@
 				<div class="row align-items-center">
 					<div class="col-xl-12">
 						<nav class="navbar navbar-expand-lg">
-							<a class="navbar-brand" href="index.php">
-								<img id="logo" src="<?php echo get_template_directory_uri(); ?>/swapnagar(2).png" alt="Logo">
+							<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
+								<img id="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/swapnanagar-orrange.png" alt="Logo">
 							</a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 								aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

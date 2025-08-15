@@ -4,7 +4,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6">
                 <div class="footer-widget">
                     <a href="index.php" class="logo d-blok">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/swapnanagar-orrange.png" alt="">
                     </a>
                     <p>Lorem ipsum dolor sit amco nsetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna .</p>
                 </div>

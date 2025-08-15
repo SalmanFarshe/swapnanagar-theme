@@ -1,10 +1,40 @@
+<?php
+/**
+ * Template Name: Library Page
+ */
+wp_head();
+?>
+<?php
+    get_template_part('./tem-parts/header', null, null);
+?>
+
+<!--====== HERO PART START ======-->
+<section class="page-banner pt-200 pb-100 bg_cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="banner-content text-center">
+                    <h1 class="text-white">All Books</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="<?php echo home_url(); ?>">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Libraries</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== HERO PART END ======-->
+
 <section id="library" class="library-area pt-140 pb-170">
     <div class="container">
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
                 <div class="text-center section-title mb-50">
                     <h2 class="mb-15 wow fadeInUp" data-wow-delay=".2s">
-                        <?php echo get_theme_mod('libraries_section_title', 'Library'); ?>
+                        <?php echo get_theme_mod('libraries_section_title', 'All Books'); ?>
                     </h2>
                     <p class="wow fadeInUp" data-wow-delay=".4s">
                         <?php echo get_theme_mod('libraries_section_subtitle', 'Explore our latest books with modern concepts, prime publications, and all essential coverage.'); ?>
@@ -17,7 +47,7 @@
             <?php
             $library = new WP_Query(array(
                 'post_type'      => 'libraries',
-                'posts_per_page' => 8,
+                'posts_per_page' => -1,
             ));
 
             if ($library->have_posts()) :
@@ -73,12 +103,17 @@
             ?>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-xl-12">
                 <div class="text-center view-all-btn mt-4">
-                    <a href="<?php echo get_post_type_archive_link('libraries'); ?>" class="main-btn">View All Books</a>
+                    <a href="<?php # echo get_post_type_archive_link('libraries'); ?>" class="main-btn">View All Books</a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
+
+<?php
+    get_template_part('./tem-parts/footer', null, null);
+    wp_footer();
+?>

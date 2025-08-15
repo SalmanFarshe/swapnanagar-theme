@@ -6,14 +6,14 @@
                     <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Education and Online Course Site Template</h2>
                     <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam diam voluptua.</p>
                     <div class="hero-btns">
-                        <a href="#courses" class="main-btn wow fadeInUp" data-wow-delay=".6s">Courses</a>
+                        <a href="#courses" class="main-btn wow fadeInUp" data-wow-delay=".6s">Join</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="hero-left">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-img.png" alt="">
+        <img class="rounded" src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-building.jpg" alt="">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dot-shape.svg" alt="" class="shape">
     </div>
 </section>

@@ -27,7 +27,7 @@
             'show_in_rest'       => true, // Gutenberg enabled
         );
 
-        register_post_type( 'building', $args );
+        register_post_type( 'buildings', $args );
     }
     add_action( 'init', 'swapnanagar_register_buildings_cpt' );
 
