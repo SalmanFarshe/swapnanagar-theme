@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="text-center view-all-btn mt-4">
-                    <a href="<?php echo get_post_type_archive_link( 'tutor' ); ?>" class="main-btn">View All Tutors</a>
+                    <a href="tutor" class="main-btn">View All Tutors</a>
                 </div>
             </div>
         </div>

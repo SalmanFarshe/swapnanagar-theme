@@ -76,7 +76,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="text-center view-all-btn mt-4">
-                    <a href="<?php echo get_post_type_archive_link('libraries'); ?>" class="main-btn">View All Books</a>
+                    <a href="library" class="main-btn">View All Books</a>
                 </div>
             </div>
         </div>

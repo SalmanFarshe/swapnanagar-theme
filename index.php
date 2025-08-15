@@ -70,6 +70,11 @@
 		get_template_part( 'tem-parts/tutor-sec' );
 	?>
 
+	<!--====== TUTOR PART START ======-->
+	<?php
+		get_template_part( 'tem-parts/shop-sec' );
+	?>
+
 	<!--====== TESTIMONIAL PART START ======-->
 	<?php
 		get_template_part( 'tem-parts/testimonial-sec' );
