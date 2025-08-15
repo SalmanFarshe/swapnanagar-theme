@@ -20,8 +20,8 @@
                                         'theme_location' => 'primary',
                                         'container'      => false,
                                         'menu_class'     => 'ml-auto navbar-nav',
-                                        'add_li_class'   => 'nav-item', // custom arg (needs filter below)
-                                        'add_a_class'    => 'page-scroll', // default link class
+                                        'add_li_class'   => 'nav-item text-black', // custom arg (needs filter below)
+                                        'add_a_class'    => 'page-scroll black-clr', // default link class
                                         'link_before'    => '',
                                         'link_after'     => '',
                                         # 'items_wrap'     => '<ul id="nav" class="%2$s">%3$s</ul>',
