@@ -74,7 +74,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="text-center view-all-btn mt-4">
-                    <a href="building" class="main-btn">View All Properties</a>
+                    <a href="building" class="main-btn">View All</a>
                 </div>
             </div>
         </div>
