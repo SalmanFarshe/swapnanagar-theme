@@ -1,4 +1,4 @@
-<section id="library" class="library-area pt-140 pb-170">
+<section id="library" class="library-area pt-70">
     <div class="container">
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
@@ -17,7 +17,7 @@
             <?php
             $library = new WP_Query(array(
                 'post_type'      => 'libraries',
-                'posts_per_page' => 8,
+                'posts_per_page' => 4,
             ));
 
             if ($library->have_posts()) :
@@ -76,7 +76,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="text-center view-all-btn mt-4">
-                    <a href="library" class="main-btn">View All Books</a>
+                    <a href="library" class="main-btn">View All</a>
                 </div>
             </div>
         </div>

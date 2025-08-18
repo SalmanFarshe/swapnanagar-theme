@@ -28,7 +28,7 @@ wp_head();
 </section>
 <!--====== HERO PART END ======-->
 
-<section id="shop" class="shop-area pt-170 pb-140">
+<section id="shop" class="shop-area pt-70 mt-70">
     <div class="container">
         <!-- Section Title -->
         <div class="row">

@@ -28,7 +28,7 @@ wp_head();
 </section>
 <!--====== HERO PART END ======-->
 
-<section id="buildings" class="building-area pt-140 pb-170">
+<section id="buildings" class="building-area pt-70 mt-70 pb-100">
     <div class="container">
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
@@ -42,7 +42,7 @@ wp_head();
         <div class="row mb-30">
             <?php
             $buildings = new WP_Query( array(
-                'post_type'      => 'buildings',
+                'post_type'      => 'building',
                 'posts_per_page' => -1,
             ));
 

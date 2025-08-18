@@ -28,7 +28,7 @@ wp_head();
 </section>
 <!--====== HERO PART END ======-->
 
-<section id="library" class="library-area pt-140 pb-170">
+<section id="library" class="library-area pt-70 mt-70">
     <div class="container">
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">

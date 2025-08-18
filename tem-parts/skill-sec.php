@@ -1,9 +1,9 @@
-<section id="skill" class="skill-area pt-170">
+<section id="skill" class="skill-area pt-70 mt-70">
 		<div class="container">
 			<div class="row">
 				<div class="mx-auto col-xl-6 col-lg-7 col-md-10">
 					<div class="text-center section-title">
-						<h2 class="mb-15 wow fadeInUp" data-wow-delay=".2s">Learn New Skills</h2>
+						<h2 class="wow fadeInUp" data-wow-delay=".2s">Learn New Skills</h2>
 						<p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabo</p>
 					</div>
 				</div>

@@ -7,7 +7,7 @@ wp_head();
 <?php
     get_template_part('./tem-parts/header2', null, null);
 ?>
-<section class="login-section pt-100">
+<section class="login-section pt-70">
     <div class="container">
         <div class="row justify-content-center">
             <h3 class="text-center mt-115">Log Into Swapnanagar</h3>

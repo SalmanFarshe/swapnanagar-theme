@@ -1,4 +1,4 @@
-<section id="buildings" class="building-area pt-140 pb-170">
+<section id="buildings" class="building-area pt-70">
     <div class="container">
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
@@ -13,7 +13,7 @@
             <?php
             $buildings = new WP_Query( array(
                 'post_type'      => 'buildings',
-                'posts_per_page' => 6,
+                'posts_per_page' => 3,
             ));
 
             if ( $buildings->have_posts() ) :
@@ -44,9 +44,18 @@
                         <div class="building-info p-3 border align-items-center rounded-bottom shadow-sm">
                             <h4 class="mb-2 text-center"><a href="<?php the_permalink(); ?>" class="text-dark"><?php the_title(); ?></a></h4>
                             <div class="building-meta d-flex justify-content-between text-muted mb-2">
-                                <div class="meta-item"><i class="lni lni-map-marker"></i> <?php echo esc_html($location); ?></div>
-                                <div class="meta-item"><i class="lni lni-map-marker"></i> <?php echo esc_html($height); ?> ft</div>
-                                <div class="meta-item"><i class="lni lni-map-marker"></i> <?php echo esc_html($floors); ?> floors</div>
+                                <div class="meta-item">
+                                    <i class="lni lni-map-marker"></i>    
+                                    <span>Owner: 70</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="lni lni-money-location"></i>
+                                    <span>Rent: 30</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="lni lni-map-marker"></i>
+                                    <span>Free: 4</span>
+                                </div>
                             </div>
                             <div class="mt-auto text-center">
                                 <a href="<?php the_permalink(); ?>" class="main-btn border">View Details</a>
