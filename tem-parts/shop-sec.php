@@ -1,4 +1,4 @@
-<section id="shop" class="shop-area pt-170 pb-140">
+<section id="shop" class="shop-area pt-70 mt-70">
     <div class="container">
         <!-- Section Title -->
         <div class="row">
@@ -32,7 +32,7 @@
                     'discount' => '10%',
                     'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2YfOjVPMOLyOCBJnmAPjCoBmu7Y6n1cIOMQ&s',
                     'link' => '#'
-                ],
+                ],                
                 [
                     'title' => 'Sony Alpha A6400 Mirrorless Digital Camera with 16-50mm Lens',
                     'price' => '94,000৳',
@@ -41,39 +41,6 @@
                     'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2YfOjVPMOLyOCBJnmAPjCoBmu7Y6n1cIOMQ&s',
                     'link' => '#'
                 ],
-                [
-                    'title' => 'Sony Alpha A6400 Mirrorless Digital Camera with 16-50mm Lens',
-                    'price' => '94,000৳',
-                    'old_price' => '105,000৳',
-                    'discount' => '10%',
-                    'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2YfOjVPMOLyOCBJnmAPjCoBmu7Y6n1cIOMQ&s',
-                    'link' => '#'
-                ],
-                [
-                    'title' => 'Sony Alpha A6400 Mirrorless Digital Camera with 16-50mm Lens',
-                    'price' => '94,000৳',
-                    'old_price' => '105,000৳',
-                    'discount' => '10%',
-                    'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2YfOjVPMOLyOCBJnmAPjCoBmu7Y6n1cIOMQ&s',
-                    'link' => '#'
-                ],
-                [
-                    'title' => 'Sony Alpha A6400 Mirrorless Digital Camera with 16-50mm Lens',
-                    'price' => '94,000৳',
-                    'old_price' => '105,000৳',
-                    'discount' => '10%',
-                    'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2YfOjVPMOLyOCBJnmAPjCoBmu7Y6n1cIOMQ&s',
-                    'link' => '#'
-                ],
-                [
-                    'title' => 'Sony Alpha A6400 Mirrorless Digital Camera with 16-50mm Lens',
-                    'price' => '94,000৳',
-                    'old_price' => '105,000৳',
-                    'discount' => '10%',
-                    'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2YfOjVPMOLyOCBJnmAPjCoBmu7Y6n1cIOMQ&s',
-                    'link' => '#'
-                ],
-                
                 [
                     'title' => 'Sony Alpha A6400 Mirrorless Digital Camera with 16-50mm Lens',
                     'price' => '94,000৳',
@@ -111,7 +78,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="text-center view-all-btn mt-4">
-                    <a href="shop" class="main-btn">View All Products</a>
+                    <a href="shop" class="main-btn">View All</a>
                 </div>
             </div>
         </div>

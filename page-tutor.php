@@ -28,7 +28,7 @@ wp_head();
 </section>
 <!--====== HERO PART END ======-->
 
-<section id="mentors" class="team-area pt-170 pb-140">
+<section id="mentors" class="team-area pt-70 mt-70">
     <div class="container">
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">

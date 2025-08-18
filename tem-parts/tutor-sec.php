@@ -1,4 +1,4 @@
-<section id="mentors" class="team-area pt-170 pb-140">
+<section id="mentors" class="team-area pt-70 mt-70">
     <div class="container">
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
@@ -14,7 +14,7 @@
             <?php
             $args = array(
                 'post_type' => 'tutor',
-                'posts_per_page' => 8
+                'posts_per_page' => 4
             );
             $tutors = new WP_Query($args);
             if ($tutors->have_posts()):
@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="text-center view-all-btn mt-4">
-                    <a href="tutor" class="main-btn">View All Tutors</a>
+                    <a href="tutor" class="main-btn">View All</a>
                 </div>
             </div>
         </div>

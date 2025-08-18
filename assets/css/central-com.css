@@ -1,0 +1,44 @@
+.central-committee-page {
+    padding: 40px 0;
+}
+.central-committee-page .page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: var(--primary-color, #222);
+}
+.committee-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.committee-member {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 20px;
+    max-width: 260px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+.committee-member:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.member-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.member-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-color, #222);
+}
+.member-position {
+    font-size: 1rem;
+    color: var(--secondary-color, #666);
+}

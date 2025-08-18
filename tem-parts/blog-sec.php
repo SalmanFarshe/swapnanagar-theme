@@ -1,4 +1,4 @@
-<section id="blog" class="blog-area pt-170 pb-140">
+<section id="blog" class="blog-area pt-70 mt-70">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-7">

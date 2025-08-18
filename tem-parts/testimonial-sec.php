@@ -1,4 +1,4 @@
-<section class="testimonial-area pt-80 pb-90" style="background: #FBFBFB">
+<section class="testimonial-area pt-70 mt-70" style="background: #FBFBFB">
     <div class="container">
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
@@ -14,13 +14,13 @@
                     <div class="customize-tools">
                         <ul class="thumbnails d-flex justify-content-center" id="customize-thumbnails">
                             <li>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial/testimonial-1.png" alt="">
+                                <img src="https://organicthemes.com/demo/profile/files/2018/05/profile-pic.jpg" alt="">
                             </li>
                             <li>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial/testimonial-2.png" alt="">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnKlukjoT6pn14aFT2Iv2Oq2gKsoa3FEQfTg4mCZtwnRkrD7S3qkVH3l1_IQwsI5iHSGw&usqp=CAU" alt="">
                             </li>
                             <li>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial/testimonial-3.png" alt="">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9hKK0n80bfsarzLuH-G3MVqm4ulsz9dd3ZQ&s" alt="">
                             </li>
                         </ul>
                     </div>
