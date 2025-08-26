@@ -34,7 +34,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <a href="to-let" class="d-block category-wrapper">
+                <a href="tolet" class="d-block category-wrapper">
                     <div class="single-category">
                         <i class="lni lni-seo"></i>
                         <h3>To-Let</h3>

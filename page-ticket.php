@@ -33,7 +33,7 @@ wp_head();
     <!-- Section Title -->
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title">Sticker</h2>
+        <h2 class="section-title">Ticket</h2>
         <p class="text-muted">Content Comming Soon</p>
       </div>
     </div>

@@ -8,16 +8,16 @@ wp_head();
     get_template_part('./tem-parts/header', null, null);
 ?>
 <!--====== HERO PART START ======-->
-<section class="page-banner pt-100 pb-70 bg_cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">
+<section class="page-banner pt-100 pb-100 bg_cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="banner-content text-center">
-                    <!-- <h1 class="text-white">Community Gallery</h1> -->
+                    <!-- <h1 class="text-white">All Buildings</h1> -->
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                            <!-- <li class="breadcrumb-item"><a href="index.php">Home</a></li> -->
+                            <!-- <li class="breadcrumb-item active" aria-current="page">buildings</li> -->
                         </ol>
                     </nav>
                 </div>
@@ -26,6 +26,7 @@ wp_head();
     </div>
 </section>
 <!--====== HERO PART END ======-->
+
 <section id="community" class="team-area pt-70 mt-70 pb-100">
   <!-- <div class="container"> -->
 

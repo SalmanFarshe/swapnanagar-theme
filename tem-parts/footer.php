@@ -22,11 +22,12 @@
             </div>
             <div class="col-xl-2 col-lg-2 col-md-6">
                 <div class="footer-widget">
-                    <h5>Our Course</h5>
+                    <h5>Catagories</h5>
                     <ul>
-                        <li><a href="tutor">Tutor</a></li>
-                        <li><a href="tolet">To Let</a></li>
-                        <li><a href="ticket">Ticket</a></li>
+                        <li><a href="commitee">Commitee</a></li>
+                        <li><a href="rules">Rules</a></li>
+                        <li><a href="gallary">Gallary</a></li>
+                        <li><a href="to-let">To Let</a></li>
                         <li><a href="sticker">Sticker</a></li>
                     </ul>
                 </div>
@@ -46,7 +47,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="text-center copy-right text-md-left">
-                        <p>Designed and Developed by <a href="https://uideck.com" rel="nofollow">UIdeck</a></p>
+                        <p>Designed and Developed by <a href="https://uideck.com" rel="nofollow">Kallol & Brothers</a></p>
                     </div>
                 </div>
                 <div class="col-md-6">
