@@ -14,7 +14,12 @@
         wp_enqueue_style('swapnanagar-lineicons', get_template_directory_uri() . '/assets/css/LineIcons.2.0.css', array(), '1.0.0');
 
         wp_enqueue_style('swapnanagar-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap-5.0.5-alpha.min.css', array(), '5.3.2');
-        
+
+            // Bootstrap Icons
+        wp_enqueue_style( 
+            'bootstrap-icons', 
+            'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css' 
+        );
         // wp_enqueue_style('swapnanagar-bootstrap', get_template_directory_uri() . 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css', array(), '5.3.2');
 
         wp_enqueue_style('swapnanagar-main-style', get_template_directory_uri() . '/assets/css/root.css', array(), '1.0.0');

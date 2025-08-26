@@ -9,7 +9,7 @@ wp_head();
 ?>
 
 <!--====== HERO PART START ======-->
-<section class="page-banner pt-100 pb-70 bg_cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">
+<section class="page-banner pt-100 pb-100 bg_cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -17,10 +17,10 @@ wp_head();
                     <!-- <h1 class="text-white">All Buildings</h1> -->
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">buildings</li>
+                            <!-- <li class="breadcrumb-item"><a href="index.php">Home</a></li> -->
+                            <!-- <li class="breadcrumb-item active" aria-current="page">buildings</li> -->
                         </ol>
-                        </nav>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -28,21 +28,59 @@ wp_head();
 </section>
 <!--====== HERO PART END ======-->
 
-<section id="buildings" class="building-area pt-70 mt-70 pb-100">
+<!--====== Search & Filter Row START ======-->
+<section class="search-filter-section py-3">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      
+      <!-- Left: Page Title -->
+            <div class="col-lg-4 col-md-4 col-12">
+                <h2 class="fw-bold mb-0 text-muted">
+                    <?php echo ucfirst( get_the_title() ); ?>
+                </h2>
+            </div>
+      
+      <!-- Right Search + Filter -->
+      <div class="col-md-8">
+        <div class="d-flex justify-content-end align-items-center gap-2">
+          
+          <!-- Search Input -->
+          <div class="input-group mt-4" style="max-width: 280px;">
+            <input type="text" class="form-control" placeholder="Search by author name">
+            <button class="btn search-btn" type="button">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+
+          <!-- Sort / Filter Button -->
+          <button class="btn btn-outline-secondary d-flex align-items-center ml-2">
+            <i class="bi bi-funnel me-2"></i> Sort by
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <hr class="mt-3">
+  </div>
+</section>
+<!--====== Search & Filter Row END ======-->
+
+
+<section id="buildings" class="building-area pt-3 pb-100">
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
                 <div class="text-center section-title mb-50">
-                    <h2 class="mb-15 wow fadeInUp" data-wow-delay=".2s"><?php echo get_theme_mod('buildings_section_title', 'Sweet Home'); ?></h2>
-                    <p class="wow fadeInUp" data-wow-delay=".4s"><?php echo get_theme_mod('buildings_section_subtitle', 'Find Your Neighbors – Explore detailed information about each building, flat owners, and rented residents, all organized in one secure and easy-to-navigate directory for the Swapnanagar community.'); ?></p>
+                    <h2 class="mb-15 wow fadeInUp" data-wow-delay=".2s"><?php # echo get_theme_mod('buildings_section_title', 'Sweet Home'); ?></h2>
+                    <p class="wow fadeInUp" data-wow-delay=".4s"><?php # echo get_theme_mod('buildings_section_subtitle', 'Find Your Neighbors – Explore detailed information about each building, flat owners, and rented residents, all organized in one secure and easy-to-navigate directory for the Swapnanagar community.'); ?></p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="row mb-30">
             <?php
             $buildings = new WP_Query( array(
-                'post_type'      => 'buildings',
+                'post_type'      => 'building',
                 'posts_per_page' => -1,
             ));
 

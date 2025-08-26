@@ -217,3 +217,10 @@ textarea:focus {
 .pt-100{
   padding-top: 100px !important;
 }
+.page-banner{
+  height: 350px;
+}
+.search-btn{
+  height: 40px !important;
+  margin-left: -40px !important;
+}
