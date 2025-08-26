@@ -4,10 +4,10 @@
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
                 <div class="text-center section-title mb-50">
                     <h2 class="mb-15 wow fadeInUp" data-wow-delay=".2s">
-                        <?php echo get_theme_mod('libraries_section_title', 'Library'); ?>
+                        <?php echo get_theme_mod('libraries_section_title', 'Community Library'); ?>
                     </h2>
                     <p class="wow fadeInUp" data-wow-delay=".4s">
-                        <?php echo get_theme_mod('libraries_section_subtitle', 'Explore our latest books with modern concepts, prime publications, and all essential coverage.'); ?>
+                        <?php echo get_theme_mod('libraries_section_subtitle', 'A shared space where Swapnanagar residents can lend, borrow, and exchange books exclusively within the community, fostering learning, sharing, and a love for reading.'); ?>
                     </p>
                 </div>
             </div>

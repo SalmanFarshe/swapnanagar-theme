@@ -5,7 +5,7 @@
 					<div class="video-content-wrapper">
 						<div class="section-title">
 							<h2 class="wow fadeInUp" data-wow-delay=".2s">A Birds Eye View</h2>
-							<p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam.</p>
+							<p class="wow fadeInUp" data-wow-delay=".4s">Discover the vibrant community of Swapnanagar through our comprehensive platform.</p>
 						</div>
 						<div class="specialty-wrapper">
 							<div class="specialty-item">
@@ -15,8 +15,8 @@
 									</div>
 								</div>
 								<div class="specialty-content">
-									<h4>200+ Online Course</h4>
-									<p>Lorem ipsum dolor sit amet, consetetur sadips cinelitr, sed diam nonumy eirmod tempor</p>
+									<h4>15 Buildings, 1,560 Flats</h4>
+									<p>Explore detailed information about every building and flat in Swapnanagar, including owner and tenant details, all in one organized community hub.</p>
 								</div>
 							</div>
 							<div class="specialty-item">
@@ -26,8 +26,8 @@
 									</div>
 								</div>
 								<div class="specialty-content">
-									<h4>Expert Instructors</h4>
-									<p>Lorem ipsum dolor sit amet, consetetur sadips cinelitr, sed diam nonumy eirmod tempor</p>
+									<h4>Trusted Community Experts</h4>
+									<p>Connect with experienced residents, committee members, and service providers who guide, support, and help make Swapnanagar a well-informed and thriving community.</p>
 								</div>
 							</div>
 							<div class="specialty-item">
@@ -37,8 +37,8 @@
 									</div>
 								</div>
 								<div class="specialty-content">
-									<h4>Lifetime Access & Support</h4>
-									<p>Lorem ipsum dolor sit amet, consetetur sadips cinelitr, sed diam nonumy eirmod tempor</p>
+									<h4>Large Community Hall</h4>
+									<p>Enjoy our versatile 9-section community hall for events, meetings, and gatherings, providing a shared space for residents to connect, celebrate, and collaborate.</p>
 								</div>
 							</div>
 						</div>

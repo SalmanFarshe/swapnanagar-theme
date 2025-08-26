@@ -9,12 +9,12 @@ wp_head();
 ?>
 
 <!--====== HERO PART START ======-->
-<section class="page-banner pt-200 pb-100 bg_cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">
+<section class="page-banner pt-100 pb-70 bg_cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="banner-content text-center">
-                    <h1 class="text-white">All Buildings</h1>
+                    <!-- <h1 class="text-white">All Buildings</h1> -->
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
@@ -33,8 +33,8 @@ wp_head();
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
                 <div class="text-center section-title mb-50">
-                    <h2 class="mb-15 wow fadeInUp" data-wow-delay=".2s"><?php echo get_theme_mod('buildings_section_title', 'A Dream Homes'); ?></h2>
-                    <p class="wow fadeInUp" data-wow-delay=".4s"><?php echo get_theme_mod('buildings_section_subtitle', 'Explore our latest properties with modern designs, prime locations, and all essential amenities.'); ?></p>
+                    <h2 class="mb-15 wow fadeInUp" data-wow-delay=".2s"><?php echo get_theme_mod('buildings_section_title', 'Sweet Home'); ?></h2>
+                    <p class="wow fadeInUp" data-wow-delay=".4s"><?php echo get_theme_mod('buildings_section_subtitle', 'Find Your Neighbors – Explore detailed information about each building, flat owners, and rented residents, all organized in one secure and easy-to-navigate directory for the Swapnanagar community.'); ?></p>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@ wp_head();
         <div class="row mb-30">
             <?php
             $buildings = new WP_Query( array(
-                'post_type'      => 'buildingsgdgdfgkdfg',
+                'post_type'      => 'buildings',
                 'posts_per_page' => -1,
             ));
 

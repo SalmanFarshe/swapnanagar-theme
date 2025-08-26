@@ -4,72 +4,59 @@
  */
 wp_head();
 ?>
-<?php get_template_part('./tem-parts/header2', null, null); ?>
+<?php 
+// get_template_part('./tem-parts/header2', null, null);
+?>
 
 <section class="login-section pt-70">
     <div class="container">
         <div class="row justify-content-center">
             <h3 class="text-center mt-115">Join the Swapnanagar Community</h3>
-            <p class="text-center mb-4">Create your account to get started.</p>
-            <div class="col-lg-10">
+            <p class="text-center mb-5">Create your account to get started.</p>
+            <div class="col-lg-6 col-md-8 col-sm-10">
                 <div class="login-box p-4 rounded">
 
-                <?php
-                if (is_user_logged_in()) {
-                    echo '<div class="already-logged-in">';
-                    echo '<p>You are already registered & logged in.</p>';
-                    echo '<a href="' . esc_url(home_url()) . '" class="btn main-btn">Go to Home</a>';
-                    echo '</div>';
-                } else {
-                    
-                    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['community_register'])) {
-                        
-                        $username   = sanitize_user($_POST['username']);
-                        $email      = sanitize_email($_POST['email']);
-                        $password   = $_POST['password'];
-                        $confirm    = $_POST['confirm_password'];
-                        $first_name = sanitize_text_field($_POST['first_name']);
-                        $last_name  = sanitize_text_field($_POST['last_name']);
-                        $role       = sanitize_text_field($_POST['reg_role']);
-                        $phone      = sanitize_text_field($_POST['phone']);
-                        $address    = sanitize_text_field($_POST['address']);
-                        $bio        = sanitize_textarea_field($_POST['bio']);
-                        
-                        $errors = new WP_Error();
+                <?php if (is_user_logged_in()): ?>
+                    <div class="already-logged-in text-center">
+                        <p>You are already registered & logged in.</p>
+                        <a href="<?php echo esc_url(home_url()); ?>" class="btn main-btn">Go to Home</a>
+                    </div>
+                <?php else: ?>
 
-                        if (username_exists($username)) {
-                            $errors->add('username_exists', 'Username already exists.');
+                    <?php
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['community_register'])) {
+                        $email_or_phone = sanitize_text_field($_POST['email_or_phone']);
+                        $password       = $_POST['password'];
+                        $errors         = new WP_Error();
+
+                        // Check email or phone
+                        if (is_email($email_or_phone)) {
+                            $email = $email_or_phone;
+                            if (email_exists($email)) {
+                                $errors->add('email_exists', 'Email already registered.');
+                            }
+                        } else {
+                            // Treat as phone: use it as username, append dummy email
+                            $phone  = $email_or_phone;
+                            $email  = $phone . '@swapnanagar.local';
+                            if (username_exists($phone)) {
+                                $errors->add('phone_exists', 'Phone number already registered.');
+                            }
                         }
-                        if (!validate_username($username)) {
-                            $errors->add('invalid_username', 'Invalid username.');
-                        }
-                        if (email_exists($email)) {
-                            $errors->add('email_exists', 'Email already registered.');
-                        }
-                        if (!is_email($email)) {
-                            $errors->add('invalid_email', 'Invalid email address.');
-                        }
-                        if ($password !== $confirm) {
-                            $errors->add('password_mismatch', 'Passwords do not match.');
-                        }
-                        if (empty($role)) {
-                            $errors->add('role_missing', 'Please select a role.');
+
+                        if (strlen($password) < 6) {
+                            $errors->add('weak_password', 'Password must be at least 6 characters.');
                         }
 
                         if (empty($errors->errors)) {
+                            $username = is_email($email_or_phone) ? explode('@', $email)[0] : $phone;
+
                             $user_id = wp_create_user($username, $password, $email);
-                            wp_update_user(array(
-                                'ID' => $user_id,
-                                'first_name' => $first_name,
-                                'last_name'  => $last_name,
-                                'role'       => $role
-                            ));
-                            
-                            update_user_meta($user_id, 'phone', $phone);
-                            update_user_meta($user_id, 'address', $address);
-                            update_user_meta($user_id, 'description', $bio);
-                            
-                            echo '<div class="alert alert-success">Registration successful! <a href="' . wp_login_url() . '">Login here</a>.</div>';
+                            if (!is_wp_error($user_id)) {
+                                echo '<div class="alert alert-success">Registration successful! <a href="' . wp_login_url() . '">Log in here</a>.</div>';
+                            } else {
+                                echo '<div class="alert alert-danger">' . esc_html($user_id->get_error_message()) . '</div>';
+                            }
                         } else {
                             foreach ($errors->get_error_messages() as $error) {
                                 echo '<div class="alert alert-danger">' . esc_html($error) . '</div>';
@@ -78,75 +65,28 @@ wp_head();
                     }
                     ?>
 
-                    <form method="post" class="registration-form">
-                        <div class="row">
-                            <!-- Column 1 -->
-                            <div class="col-md-6">
-                                <p>
-                                    <label>Username</label>
-                                    <input type="text" name="username" class="form-control" required>
-                                </p>
-                                <p>
-                                    <label>Email</label>
-                                    <input type="email" name="email" class="form-control" required>
-                                </p>
-                                <p>
-                                    <label>Password</label>
-                                    <input type="password" name="password" class="form-control" required>
-                                </p>
-                                <p>
-                                    <label>Confirm Password</label>
-                                    <input type="password" name="confirm_password" class="form-control" required>
-                                </p>
-                                <p>
-                                    <label for="reg_role">Select Your Role</label>
-                                    <select name="reg_role" id="reg_role" class="form-control" required>
-                                        <option value="">-- Select Role --</option>
-                                        <option value="subscriber">Subscriber</option>
-                                        <option value="contributor">Contributor</option>
-                                        <option value="author">Author</option>
-                                        <option value="editor">Editor</option>
-                                        <option value="tutor">Tutor</option>
-                                        <option value="student">Student</option>
-                                        <option value="library_member">Library Member</option>
-                                        <option value="event_organizer">Event Organizer</option>
-                                        <option value="moderator">Moderator</option>
-                                    </select>
-                                </p>
-                            </div>
-
-                            <!-- Column 2 -->
-                            <div class="col-md-6">
-                                <p>
-                                    <label>First Name</label>
-                                    <input type="text" name="first_name" class="form-control">
-                                </p>
-                                <p>
-                                    <label>Last Name</label>
-                                    <input type="text" name="last_name" class="form-control">
-                                </p>
-                                <p>
-                                    <label>Phone</label>
-                                    <input type="text" name="phone" class="form-control">
-                                </p>
-                                <p>
-                                    <label>Address</label>
-                                    <input type="text" name="address" class="form-control">
-                                </p>
-                                <p>
-                                    <label>Short Bio</label>
-                                    <textarea name="bio" class="form-control" rows="4"></textarea>
-                                </p>
-                            </div>
-                        </div>
+                    <form method="post" class="registration-form" id="community_register_form">
+                        <p>
+                            <label>Email or Phone</label>
+                            <input type="text" name="email_or_phone" id="email_or_phone" class="form-control" required>
+                        </p>
+                        <p class="position-relative">
+                            <label>Password</label>
+                            <input type="password" name="password" id="password" class="form-control pr-5" required>
+                            <span toggle="#password" class="toggle-password" style="position:absolute; right:10px; top:50px; cursor:pointer;">
+                                👁
+                            </span>
+                        </p>
                         <p class="mt-3">
-                            <input type="submit" name="community_register" class="btn main-btn w-100" value="Register">
+                            <input type="submit" name="community_register" id="register_btn" class="btn main-btn w-100" value="Register" disabled>
                         </p>
                     </form>
 
-                    <?php
-                }
-                ?>
+                    <div class="login-extra text-center mt-3">
+                        <p>Already have an account? <a href="login">Log in</a></p>
+                    </div>
+
+                <?php endif; ?>
 
                 </div>
             </div>
@@ -154,7 +94,32 @@ wp_head();
     </div>
 </section>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const emailPhone = document.getElementById("email_or_phone");
+    const password = document.getElementById("password");
+    const registerBtn = document.getElementById("register_btn");
+    const togglePassword = document.querySelector(".toggle-password");
+
+    function checkInputs() {
+        if (emailPhone.value.trim() !== "" && password.value.trim() !== "") {
+            registerBtn.removeAttribute("disabled");
+        } else {
+            registerBtn.setAttribute("disabled", "true");
+        }
+    }
+
+    emailPhone.addEventListener("input", checkInputs);
+    password.addEventListener("input", checkInputs);
+
+    togglePassword.addEventListener("click", function() {
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+    });
+});
+</script>
+
 <?php
-get_template_part('./tem-parts/footer', null, null);
+// get_template_part('./tem-parts/footer', null, null);
 wp_footer();
 ?>

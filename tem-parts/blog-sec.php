@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-xl-6 col-lg-7">
                 <div class="section-title">
-                    <h2 class="wow fadeInUp" data-wow-delay=".2s">From The Blog</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabo</p>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Community Blog</h2>
+                    <p class="wow fadeInUp" data-wow-delay=".4s">Stay updated with the latest news, stories, tips, and announcements from Swapnanagar. Share experiences, read insights, and be part of the conversations that keep our community connected.</p>
                 </div>
             </div>
         </div>
@@ -13,7 +13,7 @@
                 <div class="single-blog">
                     <div class="blog-img">
                         <a href="javascript:void(0)" class="d-block">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/blog-1.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog.jpeg" alt="">
                         </a>
                     </div>
                     <div class="blog-content">
@@ -27,7 +27,7 @@
                 <div class="single-blog">
                     <div class="blog-img">
                         <a href="javascript:void(0)" class="d-block">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/blog-2.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog.jpeg" alt="">
                         </a>
                     </div>
                     <div class="blog-content">
@@ -40,7 +40,7 @@
                 <div class="single-blog">
                     <div class="blog-img">
                         <a href="javascript:void(0)" class="d-block">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/blog-3.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog.jpeg" alt="">
                         </a>
                     </div>
                     <div class="blog-content">

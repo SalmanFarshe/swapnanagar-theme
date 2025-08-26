@@ -1,4 +1,4 @@
-<footer id="footer" class="footer-area pt-170">
+<footer id="footer" class="footer-area pt-70">
     <div class="container">
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-md-6">
@@ -13,10 +13,10 @@
                 <div class="footer-widget">
                     <h5>Quick Links</h5>
                     <ul>
-                        <li><a href="javascript:void(0)">Home</a></li>
-                        <li><a href="javascript:void(0)">Courses</a></li>
-                        <li><a href="javascript:void(0)">Eventd</a></li>
-                        <li><a href="javascript:void(0)">Blog</a></li>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="building">Building</a></li>
+                        <li><a href="library">Library</a></li>
+                        <li><a href="shop">Shop</a></li>
                     </ul>
                 </div>
             </div>
@@ -24,10 +24,10 @@
                 <div class="footer-widget">
                     <h5>Our Course</h5>
                     <ul>
-                        <li><a href="javascript:void(0)">Design</a></li>
-                        <li><a href="javascript:void(0)">Development</a></li>
-                        <li><a href="javascript:void(0)">Marketing</a></li>
-                        <li><a href="javascript:void(0)">SEO Design</a></li>
+                        <li><a href="tutor">Tutor</a></li>
+                        <li><a href="tolet">To Let</a></li>
+                        <li><a href="ticket">Ticket</a></li>
+                        <li><a href="sticker">Sticker</a></li>
                     </ul>
                 </div>
             </div>
@@ -35,8 +35,8 @@
                 <div class="footer-widget">
                     <h5>Contact Us</h5>
                     <ul>
-                        <li><p>Phone: +884-9273-3867</p></li>
-                        <li><p>Email: hello@gmail.com</p></li>
+                        <li><p>Phone: +880 1712-733897</p></li>
+                        <li><p>Email: kallol.kumaar@gmail.com</p></li>
                         <li><p>Address: Random Road<br> USA</p></li>
                     </ul>
                 </div>

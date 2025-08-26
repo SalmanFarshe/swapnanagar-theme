@@ -72,6 +72,11 @@
 
 	<!--====== TUTOR PART START ======-->
 	<?php
+		get_template_part( 'tem-parts/home/to-let-sec' );
+	?>
+
+	<!--====== TUTOR PART START ======-->
+	<?php
 		get_template_part( 'tem-parts/shop-sec' );
 	?>
 

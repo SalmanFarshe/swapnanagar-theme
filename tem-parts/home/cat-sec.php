@@ -4,7 +4,7 @@
             <div class="mx-auto col-xl-8 col-lg-10">
                 <div class="text-center section-title">
                     <h2 class="wow fadeInUp" data-wow-delay=".2s">Top Catagories</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam.</p>
+                    <p class="wow fadeInUp" data-wow-delay=".4s">Explore Everything at a Glance – Quickly access all key sections of Swapnanagar, including the Central Committee, Community Rules, Photo Gallery, To-Let listings, Shop Stickers, Service Tickets, Library, Account details, and more—everything you need, just a click away.</p>
                 </div>
             </div>
         </div>

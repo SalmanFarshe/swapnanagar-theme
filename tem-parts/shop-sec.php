@@ -4,9 +4,9 @@
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
                 <div class="text-center section-title">
-                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Online Shop</h2>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s" style="font-size: 40px;">Community Marketplace</h2>
                     <p class="wow fadeInUp" data-wow-delay=".4s">
-                        Lorem ipsum dolor sit amet, consectetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+                        A dedicated space for Swapnanagar residents to buy and sell products within the community, fostering local commerce and convenience.
                     </p>
                 </div>
             </div>

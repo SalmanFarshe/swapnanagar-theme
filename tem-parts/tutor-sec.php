@@ -3,9 +3,9 @@
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
                 <div class="text-center section-title">
-                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Tutors</h2>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Community Tutors</h2>
                     <p class="wow fadeInUp" data-wow-delay=".4s">
-                        Meet our expert tutors ready to help you achieve your dreams.
+                        A dedicated space for Swapnanagar residents to post and find trusted tutors for their children, making it easy to connect with experienced educators within the community.
                     </p>
                 </div>
             </div>

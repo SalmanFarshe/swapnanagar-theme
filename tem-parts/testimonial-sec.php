@@ -3,7 +3,7 @@
         <div class="row">
             <div class="mx-auto col-xl-6 col-lg-7 col-md-10">
                 <div class="text-center section-title mb-50">
-                    <h2 class="mb-15 wow fadeInUp" data-wow-delay=".2s">What Our Ex-Students Says</h2>
+                    <h2 class="mb-15 wow fadeInUp" data-wow-delay=".2s">What Our Residents Say</h2>
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
                                 <p>120 Bach Student</p>
                             </div>
                             <div class="testimonial-content">
-                                <p>"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era seddiam voluptua. At vero eos accusam justo duo dolores rebum."</p>
+                                <p>"A safe and convenient platform where Swapnanagar residents can buy, sell, and exchange items exclusively within the community."</p>
                             </div>
                         </div>
                         <div class="testimonial-content-wrapper">
@@ -40,7 +40,7 @@
                                 <p>Web Designer</p>
                             </div>
                             <div class="testimonial-content">
-                                <p>"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era seddiam voluptua. At vero eos accusam justo duo dolores rebum."</p>
+                                <p>"A user-friendly platform that has made it easy for me to find and connect with local tutors for my children."</p>
                             </div>
                         </div>
                         <div class="testimonial-content-wrapper">
@@ -49,7 +49,7 @@
                                 <p>UX Ui Designer</p>
                             </div>
                             <div class="testimonial-content">
-                                <p>"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era seddiam voluptua. At vero eos accusam justo duo dolores rebum."</p>
+                                <p>"A platform that truly understands the needs of the community, making it easy to find local services and support."</p>
                             </div>
                         </div>
                     </div>

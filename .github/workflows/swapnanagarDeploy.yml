@@ -3,7 +3,7 @@ name: Publish Theme to cPanel
 on:
   push:
     branches:
-      - prod
+      - main
 
 jobs:
   ftp-deploy:
