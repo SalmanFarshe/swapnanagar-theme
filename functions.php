@@ -68,7 +68,7 @@
 
     // theme support
     // Enable post thumbnails for posts, pages, and custom post types
-    add_theme_support('post-thumbnails', array('post', 'page', 'service', 'buildings', 'libraries', 'tutor', 'tolet')); // add your CPTs
+    add_theme_support('post-thumbnails', array('post', 'page', 'service', 'libraries', 'tutor', 'tolet')); // add your CPTs
 
     // Optional: define custom image sizes
     add_image_size('swapnanagar-small', 300, 200, true);
@@ -78,6 +78,9 @@
 
     //  building section options
     include_once('inc/manage-buildings.php');
+
+    //  tolet section options
+    include_once('inc/manage-owners.php');
 
     //  library section options
     include_once('inc/manage-library.php');

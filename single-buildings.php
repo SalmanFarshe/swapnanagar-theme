@@ -2,21 +2,21 @@
 wp_head();
 ?>
 <?php
-    get_template_part( './tem-parts/header', null, null );
+    get_template_part('./tem-parts/header', null, null);
 ?>
 <!--====== HERO PART START ======-->
-<section class="page-banner pt-200 pb-100 bg_cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">
+<section class="page-banner pt-100 pb-100 bg_cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="banner-content text-center">
-                    <h1 class="text-white"><?php the_title();; ?></h1>
+                    <!-- <h1 class="text-white">All Buildings</h1> -->
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Course Single</li>
+                            <!-- <li class="breadcrumb-item"><a href="index.php">Home</a></li> -->
+                            <!-- <li class="breadcrumb-item active" aria-current="page">buildings</li> -->
                         </ol>
-                        </nav>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -24,57 +24,227 @@ wp_head();
 </section>
 <!--====== HERO PART END ======-->
 
-<section class="building-single-area pt-140 pb-140">
-    <div class="container">
-        <?php
-        if (have_posts()) :
-            while (have_posts()) : the_post();
-                // Get meta fields
-                $location = get_post_meta(get_the_ID(), 'location', true);
-                $height   = get_post_meta(get_the_ID(), 'height', true);
-                $floors   = get_post_meta(get_the_ID(), 'floors', true);
-                $price    = get_post_meta(get_the_ID(), 'price', true);
-                $area     = get_post_meta(get_the_ID(), 'area', true);
-                $bedrooms = get_post_meta(get_the_ID(), 'bedrooms', true);
-                $bathrooms= get_post_meta(get_the_ID(), 'bathrooms', true);
-        ?>
-        
-        <div class="row mb-5">
-            <div class="col-lg-7">
-                <!-- Featured Image -->
-                <?php if (has_post_thumbnail()) : ?>
-                    <div class="building-single-img mb-4">
-                        <?php the_post_thumbnail('large', ['class' => 'img-fluid rounded']); ?>
-                    </div>
-                <?php endif; ?>
+<!--====== Search & Filter Row START ======-->
+<section class="search-filter-section py-3">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      
+      <!-- Left: Page Title -->
+            <div class="col-lg-4 col-md-4 col-12">
+                <h2 class="fw-bold mb-0 text-muted">
+                    <?php echo ucfirst( get_the_title() ); ?>
+                </h2>
             </div>
-            <div class="col-lg-5">
-                <!-- Building Details -->
-                <h2 class="mb-3"><?php the_title(); ?></h2>
-                <p class="text-muted"><?php the_content(); ?></p>
+      
+      <!-- Right Search + Filter -->
+      <div class="col-md-8">
+        <div class="d-flex justify-content-end align-items-center gap-2">
+          
+          <!-- Search Input -->
+          <div class="input-group mt-4" style="max-width: 280px;">
+            <input type="text" class="form-control" placeholder="Search by author name">
+            <button class="btn search-btn" type="button">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
 
-                <div class="building-meta-list mb-3">
-                    <p><i class="fas fa-map-marker-alt"></i> Location: <?php echo esc_html($location); ?></p>
-                    <p><i class="fas fa-arrows-alt-v"></i> Height: <?php echo esc_html($height); ?> ft</p>
-                    <p><i class="fas fa-building"></i> Floors: <?php echo esc_html($floors); ?></p>
-                    <?php if ($area) : ?><p><i class="fas fa-vector-square"></i> Area: <?php echo esc_html($area); ?> sq ft</p><?php endif; ?>
-                    <?php if ($bedrooms) : ?><p><i class="fas fa-bed"></i> Bedrooms: <?php echo esc_html($bedrooms); ?></p><?php endif; ?>
-                    <?php if ($bathrooms) : ?><p><i class="fas fa-bath"></i> Bathrooms: <?php echo esc_html($bathrooms); ?></p><?php endif; ?>
-                    <p><strong>Price:</strong> <?php echo $price ? '$' . number_format($price) : 'Price On Request'; ?></p>
-                </div>
-
-                <a href="<?php echo get_post_type_archive_link('building'); ?>" class="main-btn">Back to Listings</a>
-            </div>
+          <!-- Sort / Filter Button -->
+          <button class="btn btn-outline-secondary d-flex align-items-center ml-2">
+            <i class="bi bi-funnel me-2"></i> Sort by
+          </button>
         </div>
+      </div>
 
-        <?php
-            endwhile;
-        endif;
-        ?>
     </div>
+    <hr class="mt-3">
+  </div>
+</section>
+<!--====== Search & Filter Row END ======-->
+
+
+<section id="community" class="team-area pt-70 mt-70 pb-100">
+  <!-- <div class="container"> -->
+
+    <!-- Section Title -->
+<div class="row container m-auto">
+<h3 class="text-center">Building Owners</h3>
+<p class="text-center mb-4">Meet the dedicated individuals who own and manage our buildings.</p>
+    <!-- Owner 1 -->
+    <div class="col-xl-3 col-lg-3 col-md-6">
+        <div class="single-team">
+            <div class="team-img">
+                <a href="<?php echo home_url( '/owner' ); ?>">
+                    <img src="https://devmondo.com/wp-content/uploads/2019/05/team-1-640x640.jpg" class="img-fluid" alt="Md. Kallol">
+                </a>
+                <div class="social-link">
+                    <ul>
+                        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team-info">
+                <h4><a href="<?php echo get_template_directory_uri(); ?>/single-owner.php">Md. Kallol</a></h4>
+                <p>Owner of Flat 4A | Businessman | Dhaka, Bangladesh</p>
+            </div>
+         </div>
+    </div>
+    <!-- Owner 1 -->
+    <div class="col-xl-3 col-lg-3 col-md-6">
+        <div class="single-team">
+            <div class="team-img">
+                <a href="<?php echo home_url( '/owner' ); ?>">
+                    <img src="https://devmondo.com/wp-content/uploads/2019/05/team-1-640x640.jpg" class="img-fluid" alt="Md. Kallol">
+                </a>
+                <div class="social-link">
+                    <ul>
+                        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team-info">
+                <h4><a href="<?php echo get_template_directory_uri(); ?>/single-owner.php">Md. Kallol</a></h4>
+                <p>Owner of Flat 4A | Businessman | Dhaka, Bangladesh</p>
+            </div>
+         </div>
+    </div>
+    <!-- Owner 1 -->
+    <div class="col-xl-3 col-lg-3 col-md-6">
+        <div class="single-team">
+            <div class="team-img">
+                <a href="<?php echo home_url( '/owner' ); ?>">
+                    <img src="https://devmondo.com/wp-content/uploads/2019/05/team-1-640x640.jpg" class="img-fluid" alt="Md. Kallol">
+                </a>
+                <div class="social-link">
+                    <ul>
+                        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team-info">
+                <h4><a href="<?php echo get_template_directory_uri(); ?>/single-owner.php">Md. Kallol</a></h4>
+                <p>Owner of Flat 4A | Businessman | Dhaka, Bangladesh</p>
+            </div>
+         </div>
+    </div>
+    <!-- Owner 1 -->
+    <div class="col-xl-3 col-lg-3 col-md-6">
+        <div class="single-team">
+            <div class="team-img">
+                <a href="<?php echo home_url( '/owner' ); ?>">
+                    <img src="https://devmondo.com/wp-content/uploads/2019/05/team-1-640x640.jpg" class="img-fluid" alt="Md. Kallol">
+                </a>
+                <div class="social-link">
+                    <ul>
+                        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team-info">
+                <h4><a href="<?php echo get_template_directory_uri(); ?>/single-owner.php">Md. Kallol</a></h4>
+                <p>Owner of Flat 4A | Businessman | Dhaka, Bangladesh</p>
+            </div>
+         </div>
+    </div>
+    <!-- Owner 1 -->
+    <div class="col-xl-3 col-lg-3 col-md-6">
+        <div class="single-team">
+            <div class="team-img">
+                <a href="<?php echo home_url( '/owner' ); ?>">
+                    <img src="https://devmondo.com/wp-content/uploads/2019/05/team-1-640x640.jpg" class="img-fluid" alt="Md. Kallol">
+                </a>
+                <div class="social-link">
+                    <ul>
+                        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team-info">
+                <h4><a href="<?php echo get_template_directory_uri(); ?>/single-owner.php">Md. Kallol</a></h4>
+                <p>Owner of Flat 4A | Businessman | Dhaka, Bangladesh</p>
+            </div>
+         </div>
+    </div>
+    <!-- Owner 1 -->
+    <div class="col-xl-3 col-lg-3 col-md-6">
+        <div class="single-team">
+            <div class="team-img">
+                <a href="<?php echo home_url( '/owner' ); ?>">
+                    <img src="https://devmondo.com/wp-content/uploads/2019/05/team-1-640x640.jpg" class="img-fluid" alt="Md. Kallol">
+                </a>
+                <div class="social-link">
+                    <ul>
+                        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team-info">
+                <h4><a href="<?php echo get_template_directory_uri(); ?>/single-owner.php">Md. Kallol</a></h4>
+                <p>Owner of Flat 4A | Businessman | Dhaka, Bangladesh</p>
+            </div>
+         </div>
+    </div>
+    <!-- Owner 1 -->
+    <div class="col-xl-3 col-lg-3 col-md-6">
+        <div class="single-team">
+            <div class="team-img">
+                <a href="<?php echo home_url( '/owner' ); ?>">
+                    <img src="https://devmondo.com/wp-content/uploads/2019/05/team-1-640x640.jpg" class="img-fluid" alt="Md. Kallol">
+                </a>
+                <div class="social-link">
+                    <ul>
+                        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team-info">
+                <h4><a href="<?php echo get_template_directory_uri(); ?>/single-owner.php">Md. Kallol</a></h4>
+                <p>Owner of Flat 4A | Businessman | Dhaka, Bangladesh</p>
+            </div>
+         </div>
+    </div>
+    <!-- Owner 1 -->
+    <div class="col-xl-3 col-lg-3 col-md-6">
+        <div class="single-team">
+            <div class="team-img">
+                <a href="<?php echo home_url( '/owner' ); ?>">
+                    <img src="https://devmondo.com/wp-content/uploads/2019/05/team-1-640x640.jpg" class="img-fluid" alt="Md. Kallol">
+                </a>
+                <div class="social-link">
+                    <ul>
+                        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                        <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team-info">
+                <h4><a href="<?php echo get_template_directory_uri(); ?>/single-owner.php">Md. Kallol</a></h4>
+                <p>Owner of Flat 4A | Businessman | Dhaka, Bangladesh</p>
+            </div>
+         </div>
+    </div>
+
+</div>
+
 </section>
 
+
+
 <?php
-    get_template_part( './tem-parts/footer', null, null );
+    get_template_part('./tem-parts/footer', null, null);
     wp_footer();
 ?>
