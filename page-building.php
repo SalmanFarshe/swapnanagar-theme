@@ -80,7 +80,7 @@ wp_head();
         <div class="row mb-30">
             <?php
             $buildings = new WP_Query( array(
-                'post_type'      => 'building',
+                'post_type'      => 'buildings',
                 'posts_per_page' => -1,
             ));
 
