@@ -130,6 +130,7 @@ p {
 }
 
 .bg_cover {
+  height: 200px !important;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
