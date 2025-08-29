@@ -39,7 +39,7 @@ wp_head();
     </div>
 
     <!-- President -->
-    <!-- <div class="row justify-content-center mb-5">
+    <div class="row justify-content-center mb-5">
       <div class="col-lg-4 col-md-6">
         <div class="single-team text-center">
           <div class="team-img">
@@ -59,9 +59,9 @@ wp_head();
         </div>
       </div>
     </div>
- -->
+ 
     <!-- Vice Presidents -->
-    <!-- <div class="row justify-content-center mb-5">
+    <div class="row justify-content-center mb-5">
       <div class="col-lg-4 col-md-6">
         <div class="single-team text-center">
           <div class="team-img">
@@ -99,10 +99,10 @@ wp_head();
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Top Five -->
-    <!-- <div class="row mb-5">
+    <div class="row mb-5">
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="single-team text-center">
           <div class="team-img">
@@ -164,11 +164,11 @@ wp_head();
         </div>
       </div>
       Repeat for top2 - top5 same style 
-    </div>  -->
+    </div>
 
 
     <!-- Other Members -->
-    <!-- <div class="row">
+    <div class="row">
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
         <div class="single-team text-center">
           <div class="team-img">
@@ -318,7 +318,7 @@ wp_head();
           </div>
           <div class="team-info"><h4>Member 6</h4><p>Committee Member</p></div>
         </div>
-      </div> -->
+      </div>
       <!-- Repeat until all 25 -->
     <!-- </div> -->
 
