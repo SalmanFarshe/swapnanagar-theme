@@ -27,8 +27,8 @@ wp_head();
 </section>
 <!--====== HERO PART END ======-->
 
-<section id="community" class="team-area pt-70 mt-70 pb-100">
-  <!-- <div class="container"> -->
+<section id="community con" class="team-area pt-70 mt-70 pb-100">
+  <div class="container">
 
     <!-- Section Title -->
     <div class="row">
