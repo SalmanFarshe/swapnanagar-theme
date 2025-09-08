@@ -3,100 +3,91 @@
 ?>
 <?php
 /**
- * Template Name: Library Page
+ * Template Name: Login Page
  */
 wp_head();
 ?>
-<section class="login-section pt-70">
-    <div class="container">
-        <div class="row justify-content-center">
-            <h3 class="text-center pb-5">Log Into Swapnanagar</h3>
-            <div class="col-lg-6 col-md-8 col-sm-10">
-                <div class="login-box">
+<style>
+.login-bg {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    padding: 40px 30px;
+    margin: 25px;
+    width: 100%;
+    max-width: 400px;
+}
+.login-box h3 {
+    color: #222;
+    margin-bottom: 30px;
+}
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 45px;
+    cursor: pointer;
+    font-size: 18px;
+}
+</style>
 
-                    <?php if (is_user_logged_in()): ?>
-                        <div class="already-logged-in text-center">
-                            <p>You are already logged in.</p>
-                            <a href="<?php echo esc_url(home_url()); ?>" class="btn main-btn">Go to Home</a>
-                        </div>
-                    <?php else: ?>
-                        <?php
-                        $args = array(
-                            'redirect'       => home_url(), // redirect after login
-                            'form_id'        => 'custom_login_form',
-                            'label_username' => __('Email or Phone'),
-                            'label_password' => __('Password'),
-                            'label_log_in'   => __('Log In'),
-                            'remember'       => true
-                        );
-                        ?>
-
-                        <!-- Role Selection (commented out, not used) -->
-                        <!--
-                        <p>
-                            <label for="reg_role">Select Your Role</label>
-                            <select name="reg_role" id="reg_role" class="form-control mb-3" required>
-                                <option value="subscriber">Subscriber</option>
-                                <option value="contributor">Contributor</option>
-                                <option value="author">Author</option>
-                                <option value="editor">Editor</option>
-                                <option value="tutor">Tutor</option>
-                                <option value="student">Student</option>
-                                <option value="library_member">Library Member</option>
-                                <option value="event_organizer">Event Organizer</option>
-                                <option value="moderator">Moderator</option>
-                            </select>
-                        </p>
-                        -->
-
-                        <form name="loginform" id="custom_login_form" action="<?php echo esc_url(site_url('wp-login.php', 'login_post')); ?>" method="post">
-                            <p>
-                                <label for="user_login">Email or Phone</label>
-                                <input type="text" name="log" id="user_login" class="form-control" value="" size="20" required />
-                            </p>
-                            <p class="position-relative">
-                                <label for="user_pass">Password</label>
-                                <input type="password" name="pwd" id="user_pass" class="form-control" value="" size="20" required />
-                                <span toggle="#password" class="toggle-password" style="position:absolute; right:10px; top:50px; cursor:pointer;">
-                                👁
-                            </span>
-                            </p>
-
-                            <p class="text-right">
-                                <a href="#">Forgot Password?</a>
-                            </p>
-
-                            <p>
-                                <input type="submit" name="wp-submit" id="wp-submit" class="btn main-btn w-100" value="Log In" disabled />
-                                <input type="hidden" name="redirect_to" value="<?php echo esc_url(home_url()); ?>" />
-                            </p>
-                        </form>
-
-                        <div class="login-extra text-center mt-4">
-                            <p><a href="#">Can’t Access Your Account?</a></p>
-                            <p>Don’t have an account? <a href="register">Sign Up</a></p>
-                        </div>
-
-                    <?php endif; ?>
-
-                </div>
+<div class="login-bg">
+    <div class="login-box">
+        <h3 class="text-center pb-3">Log In</h3>
+        <?php if (is_user_logged_in()): ?>
+            <div class="already-logged-in text-center">
+                <p>You are already logged in.</p>
+                <a href="<?php echo esc_url(home_url()); ?>" class="btn main-btn">Go to Home</a>
             </div>
-        </div>
+        <?php else: ?>
+            <form name="loginform" id="custom_login_form" action="<?php echo esc_url(site_url('wp-login.php', 'login_post')); ?>" method="post">
+                <div class="mb-3">
+                    <label for="user_login">Email or Phone</label>
+                    <input type="text" name="log" id="user_login" class="form-control" value="" size="20" required />
+                </div>
+                <div class="mb-3 position-relative">
+                    <label for="user_pass">Password</label>
+                    <input type="password" name="pwd" id="user_pass" class="form-control" value="" size="20" required />
+                    <span toggle="#user_pass" class="toggle-password">👁</span>
+                </div>
+                <div class="mb-2 text-end">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" name="wp-submit" id="wp-submit" class="btn main-btn w-100" value="Log In" disabled />
+                    <input type="hidden" name="redirect_to" value="<?php echo esc_url(home_url()); ?>" />
+                </div>
+            </form>
+            <div class="login-extra text-center mt-3">
+                <p><a href="#">Can’t Access Your Account?</a></p>
+                <p>Don’t have an account? <a href="register">Sign Up</a></p>
+            </div>
+        <?php endif; ?>
     </div>
-</section>
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const emailPhone = document.getElementById("email_or_phone");
-    const password = document.getElementById("password");
-    const registerBtn = document.getElementById("register_btn");
+    const emailPhone = document.getElementById("user_login");
+    const password = document.getElementById("user_pass");
+    const loginBtn = document.getElementById("wp-submit");
     const togglePassword = document.querySelector(".toggle-password");
 
     function checkInputs() {
         if (emailPhone.value.trim() !== "" && password.value.trim() !== "") {
-            registerBtn.removeAttribute("disabled");
+            loginBtn.removeAttribute("disabled");
         } else {
-            registerBtn.setAttribute("disabled", "true");
+            loginBtn.setAttribute("disabled", "true");
         }
     }
 
@@ -110,6 +101,5 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 <?php
-    // get_template_part('./tem-parts/footer', null, null);
     wp_footer();
 ?>

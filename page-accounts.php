@@ -42,6 +42,6 @@ wp_head();
 
 
 <?php
-    get_template_part('./tem-parts/footer', null, null);
     wp_footer();
+    get_template_part('./tem-parts/footer', null, null);
 ?>

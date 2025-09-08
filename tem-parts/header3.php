@@ -1,3 +1,23 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<!--====== Title ======-->
+	<title></title>
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<?php
+		wp_head();
+	?>
+</head>
+
+<body>
+	<!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
 <header class="header_area">
 		<div id="header_navbar" class="header_navbar">
 			<div class="container">
