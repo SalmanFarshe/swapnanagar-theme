@@ -225,3 +225,7 @@ textarea:focus {
   height: 40px !important;
   margin-left: -40px !important;
 }
+
+.search-filter-section .container .row div h2{
+  font-size: 24px !important;
+}

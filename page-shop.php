@@ -1,11 +1,11 @@
 <?php
+    get_template_part( './tem-parts/header', null, null );
+?>
+<?php
 /**
  * Template Name: Shop Page
  */
 wp_head();
-?>
-<?php
-    get_template_part( './tem-parts/header', null, null );
 ?>
 
 <!--====== HERO PART START ======-->

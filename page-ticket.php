@@ -1,11 +1,11 @@
 <?php
+    get_template_part('./tem-parts/header', null, null);
+?>
+<?php
 /**
  * Template Name: Ticket Page
  */
 wp_head();
-?>
-<?php
-    get_template_part('./tem-parts/header', null, null);
 ?>
 <!--====== HERO PART START ======-->
 <section class="page-banner pt-100 pb-100 bg_cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">

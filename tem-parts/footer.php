@@ -64,3 +64,46 @@
         </div>
     </div>
 </footer>
+
+	<script>
+		//========= glightbox
+		const myGallery = GLightbox({
+			'href': '<?php echo get_template_directory_uri(); ?>/assets/video/Free App Landing Page Template - AppLand.mp4',
+			'type': 'video',
+			'source': 'youtube', //vimeo, youtube or local
+			'width': 900,
+			'autoplayVideos': true,
+		});
+
+		//======== tiny slider for testimonial
+		tns({
+			slideBy: 'page',
+			autoplay: false,
+			mouseDrag: true,
+			gutter: 0,
+			nav: true,
+			controls: true,
+			controlsPosition: 'bottom',
+			controlsText: ['<i class="lni lni-chevron-left"></i>', '<i class="lni lni-chevron-right"></i>'],
+			"container": "#customize",
+			"items": 1,
+			"center": true,
+			"navContainer": "#customize-thumbnails",
+			"navAsThumbnails": true,
+			"autoplayTimeout": 5000,
+			"swipeAngle": false,
+			"speed": 400
+		});
+
+    //===== close navbar-collapse when a  clicked
+    let navbarToggler = document.querySelector(".navbar-toggler");    
+    var navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navbarToggler.addEventListener('click', function() {
+        navbarToggler.classList.toggle("active");
+    });
+
+	</script>
+</body>
+
+</html>

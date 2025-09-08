@@ -1,11 +1,11 @@
 <?php
+    get_template_part('./tem-parts/header3', null, null);
+?>
+<?php
 /**
  * Template Name: Library Page
  */
 wp_head();
-?>
-<?php
-    get_template_part('./tem-parts/header3', null, null);
 ?>
 <section class="login-section pt-70">
     <div class="container">
