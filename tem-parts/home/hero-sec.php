@@ -1,4 +1,4 @@
-<section id="home" class="hero-area bg_cover">
+<section id="home" class="hero-area bg_cover_hero">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-5 offset-xl-7 col-lg-8 offset-lg-2 col-md-10 offset-md-1">

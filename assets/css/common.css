@@ -135,6 +135,11 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.bg_cover_hero {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .success {
   color: #7CB637;
